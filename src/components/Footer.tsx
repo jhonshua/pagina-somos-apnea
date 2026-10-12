@@ -11,17 +11,17 @@ export const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4 select-none">
-              <span className="text-white text-xs sm:text-[13px] md:text-sm font-black tracking-wider drop-shadow leading-none uppercase">
+              <span className="text-white text-xs sm:text-[13px] md:text-sm font-black tracking-wider drop-shadow leading-none uppercase -mr-0.5 sm:-mr-1">
                 SOMOS
               </span>
-              <div className="h-11 sm:h-12 w-auto mx-1 sm:mx-1.5 flex items-center justify-center shrink-0">
+              <div className="h-11 sm:h-12 w-auto flex items-center justify-center shrink-0">
                 <img 
                   src="/whale-only.png" 
                   alt="Somos Apnea" 
                   className="h-full w-auto object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.5)] pointer-events-none"
                 />
               </div>
-              <div className="flex items-center gap-1 sm:gap-1.5">
+              <div className="flex items-center gap-1 sm:gap-1.5 -ml-0.5 sm:-ml-1">
                 <span className="text-cyan-300 text-xs sm:text-[13px] md:text-sm font-black tracking-wider leading-none drop-shadow uppercase">
                   APNEA
                 </span>

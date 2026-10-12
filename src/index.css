@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism containers */
+  .glass-nav {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 10, 20, 0.35);
+  }
+
+  .glass-card {
+    background: linear-gradient(145deg, rgba(14, 74, 112, 0.35) 0%, rgba(4, 28, 44, 0.65) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 164, 224, 0.2);
+    box-shadow: 0 10px 30px -10px rgba(2, 18, 30, 0.7);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    border-color: rgba(56, 164, 224, 0.45);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(14, 74, 112, 0.5);
+  }
+
+  /* Coral CTA Button with inner shine */
+  .btn-coral {
+    background: linear-gradient(180deg, #f26a3a 0%, #db4a1a 50%, #b83408 100%);
+    box-shadow: 
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.45),
+      0 4px 14px 0 rgba(219, 74, 26, 0.4);
+    transition: all 0.25s ease-out;
+  }
+  .btn-coral:hover {
+    background: linear-gradient(180deg, #ff7a4b 0%, #eb5524 50%, #c93b0d 100%);
+    box-shadow: 
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.6),
+      0 6px 20px 0 rgba(235, 85, 36, 0.6);
+    transform: translateY(-1px);
+  }
+  .btn-coral:active {
+    transform: translateY(1px);
+    box-shadow: 
+      inset 0 2px 4px 0 rgba(0, 0, 0, 0.3),
+      0 2px 6px 0 rgba(219, 74, 26, 0.3);
+  }
+
+  /* 3D Embossed Title Effect matching reference design */
+  .title-3d {
+    color: #e2f1f8;
+    text-shadow: 
+      0 1px 0 #ffffff,
+      0 2px 0 #b3d4e5,
+      0 3px 0 #89b3cb,
+      0 4px 0 #6391ab,
+      0 6px 12px rgba(2, 18, 30, 0.85);
+  }
+}

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import { VenezuelaFlag } from './VenezuelaFlag';
 
 interface NavbarProps {
   onOpenJoinModal: () => void;
@@ -9,32 +8,54 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Escuchar el scroll para activar el halo sutil detrás del logo
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
-    { id: 'home', label: 'HOME', href: '#home' },
-    { id: 'curses', label: 'CURSOS', href: '#cursos' },
-    { id: 'training', label: 'TRAINING', href: '#entrenamientos' },
-    { id: 'competitions', label: 'COMPETITIONS', href: '#competencias' },
+    { id: 'Inicio', label: 'Inicio', href: '#home' },
+    { id: 'curses', label: 'Cursos', href: '#cursos' },
+    { id: 'Entrenamioentos', label: 'Entrenamientos', href: '#entrenamientos' },
+    { id: 'Competencias', label: 'Competencias', href: '#competencias' },
     { id: 'blog', label: 'BLOG', href: '#blog' },
-    { id: 'contact', label: 'CONTACT', href: '#contacto' },
+    { id: 'contacto', label: 'Contactanos', href: '#contacto' },
   ];
 
   return (
-    <header className="fixed top-3 md:top-5 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <nav className="glass-nav rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300">
-        
-        {/* Logo Oficial Original de Somos Apnea + Bandera Ondulante */}
-        <a href="#home" className="flex items-center gap-1.5 sm:gap-2 group cursor-pointer select-none py-0.5">
-          <img 
-            src="/somos-apnea-logo-oficial.png" 
-            alt="Somos Apnea" 
-            className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] pointer-events-none"
-          />
-          <VenezuelaFlag className="w-5 h-3.5 sm:w-6 sm:h-4" />
-        </a>
+    <header className="fixed top-3 md:top-5 left-0 right-0 z-50 px-4 max-w-7xl mx-auto flex items-center justify-center gap-4 sm:gap-6 md:gap-8">
+      
+      {/* Contenedor del Logo con halo/fondo súper suave y mimetizado */}
+      <div 
+        className={`flex-shrink-0 select-none p-3 sm:p-4 rounded-full transition-all duration-700 ease-in-out ${
+          isScrolled 
+            ? 'bg-slate-950/35 backdrop-blur-md shadow-2xl shadow-black/20' 
+            : 'bg-transparent'
+        }`}
+      >
+        <img 
+          src="/somos-apnea-logo-oficial.png" 
+          alt="Somos Apnea" 
+          className="h-16 sm:h-20 md:h-24 w-auto object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)] pointer-events-none transition-all duration-700"
+        />
+      </div>
 
+      {/* Cápsula Gris (glass-nav) */}
+      <nav className="glass-nav rounded-2xl md:rounded-full px-5 sm:px-7 py-2.5 sm:py-3 flex items-center gap-6 sm:gap-8 transition-all duration-300">
+        
         {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-7 xl:gap-8">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-7">
           {navLinks.map((link) => {
             const isActive = activeTab === link.id;
             return (
@@ -58,12 +79,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center">
           <button
             onClick={onOpenJoinModal}
             className="btn-coral text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-full flex items-center gap-2 group cursor-pointer shadow-lg"
           >
-            <span>JOIN NOW</span>
+            <span>COMUNIDAD</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </button>
         </div>
@@ -81,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden mt-2 glass-card rounded-2xl p-5 border border-cyan-500/20 shadow-2xl backdrop-blur-xl">
+        <div className="absolute top-full left-4 right-4 lg:hidden mt-2 glass-card rounded-2xl p-5 border border-cyan-500/20 shadow-2xl backdrop-blur-xl">
           <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
@@ -108,7 +129,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
                 }}
                 className="w-full btn-coral text-white font-bold text-xs uppercase tracking-wider py-3 rounded-xl flex items-center justify-center gap-2"
               >
-                <span>JOIN NOW</span>
+                <span>COMUNIDAD</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

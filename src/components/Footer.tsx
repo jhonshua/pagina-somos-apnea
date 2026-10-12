@@ -1,6 +1,5 @@
 import React from 'react';
-import { Instagram, Mail, Phone, MapPin, Heart } from 'lucide-react';
-import { VenezuelaFlag } from './VenezuelaFlag';
+import { Instagram, Mail, Phone, MapPin, Heart, Users } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,22 +9,21 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-1.5 sm:gap-2 mb-4 select-none">
+            <div className="flex items-center mb-4 select-none">
               <img 
                 src="/somos-apnea-logo-oficial.png" 
                 alt="Somos Apnea" 
-                className="h-10 sm:h-12 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] pointer-events-none"
+                className="h-24 sm:h-28 md:h-32 w-auto object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)] pointer-events-none"
               />
-              <VenezuelaFlag className="w-5 h-3.5 sm:w-6 sm:h-4" />
             </div>
 
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-sm mb-6">
-              Escuela de apnea deportiva en Venezuela. Promovemos el buceo a pulmón libre bajo estrictos estándares de seguridad, conexión mental y respeto absoluto por el ecosistema marino.
+              Asociación civil sin fines de lucro y comunidad de apnea en Venezuela. Promovemos la práctica del buceo a pulmón libre, impulsamos el desarrollo de nuestros atletas y fomentamos inmersiones seguras en armonía con el mar.
             </p>
 
             <div className="flex items-center gap-3 text-slate-300 text-xs">
-              <span className="flex items-center gap-1 text-cyan-300">
-                <MapPin className="w-4 h-4" /> Caracas & Chichiriviche de la Costa, Venezuela
+              <span className="flex items-center gap-1.5 text-cyan-300 font-medium">
+                <MapPin className="w-4 h-4 text-cyan-400" /> Caracas, Venezuela
               </span>
             </div>
           </div>
@@ -37,31 +35,21 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-300">
               <li><a href="#home" className="hover:text-cyan-300 transition-colors">Inicio</a></li>
-              <li><a href="#cursos" className="hover:text-cyan-300 transition-colors">Cursos & Certificaciones</a></li>
-              <li><a href="#entrenamientos" className="hover:text-cyan-300 transition-colors">Entrenamientos & Spots</a></li>
-              <li><a href="#competencias" className="hover:text-cyan-300 transition-colors">Atletas & Competencias</a></li>
-              <li><a href="#blog" className="hover:text-cyan-300 transition-colors">Blog y Consejos de Respiración</a></li>
+              <li><a href="#cursos" className="hover:text-cyan-300 transition-colors">Talleres & Formación</a></li>
+              <li><a href="#entrenamientos" className="hover:text-cyan-300 transition-colors">Comunidad & Salidas al Mar</a></li>
+              <li><a href="#competencias" className="hover:text-cyan-300 transition-colors">Resultados & Torneos AIDA</a></li>
+              <li><a href="#blog" className="hover:text-cyan-300 transition-colors">Blog y Consejos de Apnea</a></li>
             </ul>
           </div>
 
           {/* Contact & Socials */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
-              Contacto Directo
+              Contacto & Redes
             </h4>
             <div className="space-y-3 text-xs text-slate-300">
               <a 
-                href="https://wa.me/584120000000" 
-                target="_blank" 
-                rel="noreferrer"
-                className="flex items-center gap-2.5 hover:text-cyan-300 transition-colors"
-              >
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span>WhatsApp: +58 412 000 0000</span>
-              </a>
-
-              <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/somosapnea" 
                 target="_blank" 
                 rel="noreferrer"
                 className="flex items-center gap-2.5 hover:text-cyan-300 transition-colors"
@@ -70,13 +58,15 @@ export const Footer: React.FC = () => {
                 <span>Instagram: @somosapnea</span>
               </a>
 
-              <a 
-                href="mailto:info@somosapnea.com" 
-                className="flex items-center gap-2.5 hover:text-cyan-300 transition-colors"
-              >
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span>info@somosapnea.com</span>
-              </a>
+              <div className="flex items-center gap-2.5 text-slate-400">
+                <Mail className="w-4 h-4 text-cyan-400/60" />
+                <span>Próximamente correo de contacto</span>
+              </div>
+
+              <div className="flex items-center gap-2.5 text-slate-400">
+                <Phone className="w-4 h-4 text-cyan-400/60" />
+                <span>Próximamente línea directa</span>
+              </div>
             </div>
           </div>
 
@@ -85,12 +75,10 @@ export const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
           <div>
-            © {new Date().getFullYear()} Somos Apnea Venezuela. Todos los derechos reservados.
+            © {new Date().getFullYear()} Somos Apnea Venezuela. Asociación Civil sin Fines de Lucro.
           </div>
           <div className="flex items-center gap-1.5 text-slate-300">
-            <span>Hecho con</span>
-            <Heart className="w-3.5 h-3.5 text-coral-500 fill-coral-500" />
-            <span>para el mar venezolano 🇻🇪</span>
+            <span>Impulsando la apnea en el mar venezolano 🇻🇪❤️</span>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Mail, Phone, MapPin, Heart } from 'lucide-react';
+import { VenezuelaFlag } from './VenezuelaFlag';
 
 export const Footer: React.FC = () => {
   return (
@@ -20,15 +21,11 @@ export const Footer: React.FC = () => {
                   className="h-full w-full object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.5)]"
                 />
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-2">
                 <span className="text-cyan-300 text-sm sm:text-base font-black tracking-wider leading-none drop-shadow">
                   APNEA
                 </span>
-                <span className="inline-flex items-center overflow-hidden rounded-sm w-4 h-2.5 border border-white/40">
-                  <span className="w-1/3 h-full bg-[#fdd116]"></span>
-                  <span className="w-1/3 h-full bg-[#003da5]"></span>
-                  <span className="w-1/3 h-full bg-[#ce1126]"></span>
-                </span>
+                <VenezuelaFlag className="w-5 h-3.5 shadow" />
               </div>
             </div>
 

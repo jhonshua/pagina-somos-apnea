@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import { VenezuelaFlag } from './VenezuelaFlag';
 
 interface NavbarProps {
   onOpenJoinModal: () => void;
@@ -39,17 +40,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
             <div className="absolute inset-0 rounded-full border border-white/10 pointer-events-none"></div>
           </div>
 
-          {/* APNEA + Bandera */}
-          <div className="flex items-center gap-1.5">
+          {/* APNEA + Bandera oficial de Venezuela */}
+          <div className="flex items-center gap-2">
             <span className="text-cyan-300 text-sm sm:text-base md:text-lg font-black tracking-wider leading-none drop-shadow">
               APNEA
             </span>
-            {/* Venezuelan Flag Badge */}
-            <span className="inline-flex items-center overflow-hidden rounded-sm w-4 h-2.5 shadow-sm border border-white/40" title="Venezuela">
-              <span className="w-1/3 h-full bg-[#fdd116]"></span>
-              <span className="w-1/3 h-full bg-[#003da5]"></span>
-              <span className="w-1/3 h-full bg-[#ce1126]"></span>
-            </span>
+            <VenezuelaFlag className="w-5 h-3.5 shadow" />
           </div>
         </a>
 

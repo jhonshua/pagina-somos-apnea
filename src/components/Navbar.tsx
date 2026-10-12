@@ -25,12 +25,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
         
         {/* Logo Oficial: SOMOS + Ballena + APNEA + Bandera Ondulante integrados */}
         <a href="#home" className="flex items-center group cursor-pointer select-none">
-          {/* SOMOS */}
-          <span className="text-white text-xs sm:text-[13px] md:text-sm font-black tracking-wider drop-shadow leading-none uppercase -mr-0.5 sm:-mr-1">
+          {/* SOMOS - pegado fuertemente a la ballena */}
+          <span className="text-white text-xs sm:text-[13px] md:text-sm font-black tracking-wider drop-shadow leading-none uppercase -mr-3 sm:-mr-4 z-10">
             SOMOS
           </span>
 
-          {/* En el medio: Solo la ballena pegada directamente a las letras */}
+          {/* En el medio: Solo la ballena */}
           <div className="relative h-11 sm:h-12 md:h-14 w-auto flex items-center justify-center shrink-0">
             <img 
               src="/whale-only.png" 
@@ -39,8 +39,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
             />
           </div>
 
-          {/* APNEA + Bandera Ondulante de Venezuela */}
-          <div className="flex items-center gap-1 sm:gap-1.5 -ml-0.5 sm:-ml-1">
+          {/* APNEA - pegado fuertemente a la ballena + Bandera Ondulante */}
+          <div className="flex items-center gap-1 sm:gap-1.5 -ml-3 sm:-ml-4 z-10">
             <span className="text-cyan-300 text-xs sm:text-[13px] md:text-sm font-black tracking-wider leading-none drop-shadow uppercase">
               APNEA
             </span>

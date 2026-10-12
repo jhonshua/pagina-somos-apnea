@@ -16,11 +16,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenJoinModal }) => {
         <img 
           src="/hero-bg.jpg" 
           alt="Somos Apnea - Escuela de apnea deportiva en Venezuela" 
-          className="w-full h-full object-cover object-[60%_center] md:object-center filter brightness-95 contrast-[1.05]"
+          className="w-full h-full object-cover object-[55%_center] md:object-center select-none"
+          loading="eager"
+          // @ts-ignore
+          fetchPriority="high"
         />
         {/* Ambient Oceanic Overlays for readability and depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ocean-950 via-transparent to-ocean-950/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ocean-950/90 via-ocean-950/40 to-transparent max-w-4xl" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ocean-950 via-transparent to-ocean-950/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ocean-950/85 via-ocean-950/35 to-transparent max-w-4xl" />
         {/* Subtle Water Caustic / God Rays Glow */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none" />
       </div>

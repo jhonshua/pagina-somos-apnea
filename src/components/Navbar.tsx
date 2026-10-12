@@ -23,29 +23,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
     <header className="fixed top-3 md:top-5 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <nav className="glass-nav rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300">
         
-        {/* Logo Oficial: SOMOS + Ballena + APNEA + Bandera Ondulante integrados */}
-        <a href="#home" className="flex items-center group cursor-pointer select-none">
-          {/* SOMOS - pegado fuertemente a la ballena */}
-          <span className="text-white text-xs sm:text-[13px] md:text-sm font-black tracking-wider drop-shadow leading-none uppercase -mr-3 sm:-mr-4 z-10">
-            SOMOS
-          </span>
-
-          {/* En el medio: Solo la ballena */}
-          <div className="relative h-11 sm:h-12 md:h-14 w-auto flex items-center justify-center shrink-0">
-            <img 
-              src="/whale-only.png" 
-              alt="Somos Apnea" 
-              className="h-full w-auto object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.5)] pointer-events-none"
-            />
-          </div>
-
-          {/* APNEA - pegado fuertemente a la ballena + Bandera Ondulante */}
-          <div className="flex items-center gap-1 sm:gap-1.5 -ml-3 sm:-ml-4 z-10">
-            <span className="text-cyan-300 text-xs sm:text-[13px] md:text-sm font-black tracking-wider leading-none drop-shadow uppercase">
-              APNEA
-            </span>
-            <VenezuelaFlag className="w-5 h-3.5 sm:w-6 sm:h-4" />
-          </div>
+        {/* Logo Oficial Maestro Integrado: SOMOS APNEA + Ballena centrada de fondo + Bandera Ondulante */}
+        <a href="#home" className="flex items-center group cursor-pointer select-none py-0.5">
+          <img 
+            src="/somos-apnea-logo-full.png" 
+            alt="Somos Apnea Venezuela" 
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none"
+          />
         </a>
 
         {/* Desktop Nav Links */}

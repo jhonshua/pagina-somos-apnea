@@ -23,29 +23,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
     <header className="fixed top-3 md:top-5 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <nav className="glass-nav rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300">
         
-        {/* Logo Oficial: SOMOS + Ballena + APNEA en una sola fila */}
+        {/* Logo Oficial: SOMOS + Ballena Grande + APNEA en una sola fila */}
         <a href="#home" className="flex items-center gap-2 sm:gap-2.5 md:gap-3 group">
-          {/* SOMOS */}
-          <span className="text-white text-sm sm:text-base md:text-lg font-black tracking-widest drop-shadow leading-none">
+          {/* SOMOS (letras más pequeñas y estilizadas) */}
+          <span className="text-white text-xs sm:text-[13px] md:text-sm font-bold tracking-[0.2em] drop-shadow leading-none uppercase">
             SOMOS
           </span>
 
-          {/* En el medio: Solo la ballena */}
-          <div className="relative h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 rounded-full bg-gradient-to-br from-cyan-900/60 via-ocean-900 to-ocean-950 border border-cyan-300/50 p-1 flex items-center justify-center shadow-lg shadow-cyan-950/70 group-hover:border-cyan-200 transition-all shrink-0">
+          {/* En el medio: Solo la ballena flotante más grande (sin botón ni círculo) */}
+          <div className="relative h-12 sm:h-14 md:h-16 w-10 sm:w-12 md:w-14 flex items-center justify-center shrink-0">
             <img 
               src="/whale-only.png" 
               alt="Somos Apnea Ballena" 
-              className="h-full w-full object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.4)] group-hover:scale-110 transition-transform"
+              className="h-full w-full object-contain filter drop-shadow-[0_0_10px_rgba(56,164,224,0.6)] group-hover:scale-110 transition-transform duration-300"
             />
-            <div className="absolute inset-0 rounded-full border border-white/10 pointer-events-none"></div>
           </div>
 
-          {/* APNEA + Bandera oficial de Venezuela */}
-          <div className="flex items-center gap-2">
-            <span className="text-cyan-300 text-sm sm:text-base md:text-lg font-black tracking-wider leading-none drop-shadow">
+          {/* APNEA (letras más pequeñas) + Bandera oficial de Venezuela */}
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <span className="text-cyan-300 text-xs sm:text-[13px] md:text-sm font-extrabold tracking-[0.18em] drop-shadow leading-none uppercase">
               APNEA
             </span>
-            <VenezuelaFlag className="w-5 h-3.5 shadow" />
+            <VenezuelaFlag className="w-4 h-2.5 sm:w-5 sm:h-3.5 shadow" />
           </div>
         </a>
 

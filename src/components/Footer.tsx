@@ -10,22 +10,22 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-white text-sm sm:text-base font-black tracking-widest drop-shadow leading-none">
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-4">
+              <span className="text-white text-xs sm:text-sm font-bold tracking-[0.2em] drop-shadow leading-none uppercase">
                 SOMOS
               </span>
-              <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-cyan-900/60 to-ocean-950 border border-cyan-400/40 p-1 flex items-center justify-center shadow-lg shadow-cyan-950/70 shrink-0">
+              <div className="h-12 w-10 flex items-center justify-center shrink-0">
                 <img 
                   src="/whale-only.png" 
                   alt="Somos Apnea Ballena" 
                   className="h-full w-full object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.5)]"
                 />
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-cyan-300 text-sm sm:text-base font-black tracking-wider leading-none drop-shadow">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-cyan-300 text-xs sm:text-sm font-extrabold tracking-[0.18em] leading-none drop-shadow uppercase">
                   APNEA
                 </span>
-                <VenezuelaFlag className="w-5 h-3.5 shadow" />
+                <VenezuelaFlag className="w-4 h-2.5 sm:w-5 sm:h-3.5 shadow" />
               </div>
             </div>
 

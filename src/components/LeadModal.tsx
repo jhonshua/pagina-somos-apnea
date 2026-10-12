@@ -73,14 +73,20 @@ export const LeadModal: React.FC<LeadModalProps> = ({ isOpen, onClose, selectedC
 
         {!submitted ? (
           <div>
-            <div className="flex items-center gap-2 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-2">
-              <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span>Inscripciones Abiertas</span>
+            <div className="flex items-center gap-3.5 mb-3">
+              <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-cyan-900/60 to-ocean-950 border border-cyan-400/40 p-1 flex items-center justify-center shrink-0 shadow-md">
+                <img src="/logo-somos-apnea.png" alt="Somos Apnea" className="h-full w-full object-contain filter drop-shadow" />
+              </div>
+              <div>
+                <div className="flex items-center gap-1.5 text-cyan-300 text-[11px] font-bold uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>Inscripciones Abiertas</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight">
+                  Únete a Somos Apnea
+                </h3>
+              </div>
             </div>
-            
-            <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-2">
-              Únete a Somos Apnea
-            </h3>
             
             <p className="text-slate-300 text-xs sm:text-sm mb-6 leading-relaxed">
               Completa tus datos y nos pondremos en contacto contigo de inmediato para coordinar tus clases y responder todas tus dudas.

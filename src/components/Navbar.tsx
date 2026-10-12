@@ -22,23 +22,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
     <header className="fixed top-3 md:top-5 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <nav className="glass-nav rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300">
         
-        {/* Logo */}
+        {/* Logo Oficial */}
         <a href="#home" className="flex items-center gap-3 group">
-          {/* Circular badge with diver silhouette */}
-          <div className="relative w-10 h-10 md:w-11 md:h-11 rounded-full bg-gradient-to-br from-cyan-600 via-ocean-800 to-ocean-950 border-2 border-cyan-300/70 p-2 flex items-center justify-center shadow-lg shadow-cyan-900/60 group-hover:border-cyan-200 transition-colors">
-            {/* Free diver SVG Icon */}
-            <svg 
-              viewBox="0 0 100 100" 
-              className="w-full h-full text-cyan-200 drop-shadow"
-              fill="currentColor"
-            >
-              {/* Diver diving downwards */}
-              <circle cx="50" cy="22" r="9" />
-              <path d="M46 34 L54 34 L58 55 L65 72 L61 74 L54 60 L50 78 L43 96 L37 94 L44 75 L45 52 L38 42 Z" />
-              {/* Fins */}
-              <path d="M37 94 L30 100 L42 98 Z" />
-            </svg>
-            <div className="absolute inset-0 rounded-full border border-white/20 animate-pulse pointer-events-none"></div>
+          <div className="relative h-11 w-11 md:h-12 md:w-12 rounded-full bg-gradient-to-br from-cyan-900/60 via-ocean-900 to-ocean-950 border border-cyan-300/50 p-1 flex items-center justify-center shadow-lg shadow-cyan-950/70 group-hover:border-cyan-200 transition-all">
+            <img 
+              src="/logo-somos-apnea.png" 
+              alt="Somos Apnea Logo" 
+              className="h-full w-full object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.4)] group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute inset-0 rounded-full border border-white/10 pointer-events-none"></div>
           </div>
 
           <div className="flex flex-col">

@@ -9,12 +9,13 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-600 to-ocean-900 border border-cyan-300 p-2 flex items-center justify-center">
-                <svg viewBox="0 0 100 100" className="w-full h-full text-cyan-200" fill="currentColor">
-                  <circle cx="50" cy="22" r="9" />
-                  <path d="M46 34 L54 34 L58 55 L65 72 L61 74 L54 60 L50 78 L43 96 L37 94 L44 75 L45 52 L38 42 Z" />
-                </svg>
+            <div className="flex items-center gap-3.5 mb-4">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-cyan-900/60 to-ocean-950 border border-cyan-400/40 p-1.5 flex items-center justify-center shadow-lg shadow-cyan-950/70">
+                <img 
+                  src="/logo-somos-apnea.png" 
+                  alt="Somos Apnea Logo" 
+                  className="h-full w-full object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.5)]"
+                />
               </div>
               <div>
                 <div className="flex items-center gap-1.5">

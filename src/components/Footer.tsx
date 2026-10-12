@@ -9,24 +9,26 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3.5 mb-4">
-              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-cyan-900/60 to-ocean-950 border border-cyan-400/40 p-1.5 flex items-center justify-center shadow-lg shadow-cyan-950/70">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-white text-sm sm:text-base font-black tracking-widest drop-shadow leading-none">
+                SOMOS
+              </span>
+              <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-cyan-900/60 to-ocean-950 border border-cyan-400/40 p-1 flex items-center justify-center shadow-lg shadow-cyan-950/70 shrink-0">
                 <img 
-                  src="/logo-somos-apnea.png" 
-                  alt="Somos Apnea Logo" 
+                  src="/whale-only.png" 
+                  alt="Somos Apnea Ballena" 
                   className="h-full w-full object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.5)]"
                 />
               </div>
-              <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="text-white text-xs font-bold tracking-widest">SOMOS</span>
-                  <span className="inline-flex items-center overflow-hidden rounded-sm w-4 h-2.5 border border-white/40">
-                    <span className="w-1/3 h-full bg-[#fdd116]"></span>
-                    <span className="w-1/3 h-full bg-[#003da5]"></span>
-                    <span className="w-1/3 h-full bg-[#ce1126]"></span>
-                  </span>
-                </div>
-                <span className="text-cyan-300 text-sm font-extrabold tracking-wider leading-none">APNEA</span>
+              <div className="flex items-center gap-1.5">
+                <span className="text-cyan-300 text-sm sm:text-base font-black tracking-wider leading-none drop-shadow">
+                  APNEA
+                </span>
+                <span className="inline-flex items-center overflow-hidden rounded-sm w-4 h-2.5 border border-white/40">
+                  <span className="w-1/3 h-full bg-[#fdd116]"></span>
+                  <span className="w-1/3 h-full bg-[#003da5]"></span>
+                  <span className="w-1/3 h-full bg-[#ce1126]"></span>
+                </span>
               </div>
             </div>
 

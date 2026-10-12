@@ -22,28 +22,34 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
     <header className="fixed top-3 md:top-5 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <nav className="glass-nav rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300">
         
-        {/* Logo Oficial */}
-        <a href="#home" className="flex items-center gap-3 group">
-          <div className="relative h-11 w-11 md:h-12 md:w-12 rounded-full bg-gradient-to-br from-cyan-900/60 via-ocean-900 to-ocean-950 border border-cyan-300/50 p-1 flex items-center justify-center shadow-lg shadow-cyan-950/70 group-hover:border-cyan-200 transition-all">
+        {/* Logo Oficial: SOMOS + Ballena + APNEA en una sola fila */}
+        <a href="#home" className="flex items-center gap-2 sm:gap-2.5 md:gap-3 group">
+          {/* SOMOS */}
+          <span className="text-white text-sm sm:text-base md:text-lg font-black tracking-widest drop-shadow leading-none">
+            SOMOS
+          </span>
+
+          {/* En el medio: Solo la ballena */}
+          <div className="relative h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 rounded-full bg-gradient-to-br from-cyan-900/60 via-ocean-900 to-ocean-950 border border-cyan-300/50 p-1 flex items-center justify-center shadow-lg shadow-cyan-950/70 group-hover:border-cyan-200 transition-all shrink-0">
             <img 
-              src="/logo-somos-apnea.png" 
-              alt="Somos Apnea Logo" 
-              className="h-full w-full object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.4)] group-hover:scale-105 transition-transform"
+              src="/whale-only.png" 
+              alt="Somos Apnea Ballena" 
+              className="h-full w-full object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.4)] group-hover:scale-110 transition-transform"
             />
             <div className="absolute inset-0 rounded-full border border-white/10 pointer-events-none"></div>
           </div>
 
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5">
-              <span className="text-white text-xs md:text-sm font-bold tracking-widest drop-shadow">SOMOS</span>
-              {/* Venezuelan Flag Badge */}
-              <span className="inline-flex items-center overflow-hidden rounded-sm w-4 h-2.5 shadow-sm border border-white/40" title="Venezuela">
-                <span className="w-1/3 h-full bg-[#fdd116]"></span>
-                <span className="w-1/3 h-full bg-[#003da5]"></span>
-                <span className="w-1/3 h-full bg-[#ce1126]"></span>
-              </span>
-            </div>
-            <span className="text-cyan-300 text-sm md:text-base font-black tracking-wider leading-none drop-shadow">APNEA</span>
+          {/* APNEA + Bandera */}
+          <div className="flex items-center gap-1.5">
+            <span className="text-cyan-300 text-sm sm:text-base md:text-lg font-black tracking-wider leading-none drop-shadow">
+              APNEA
+            </span>
+            {/* Venezuelan Flag Badge */}
+            <span className="inline-flex items-center overflow-hidden rounded-sm w-4 h-2.5 shadow-sm border border-white/40" title="Venezuela">
+              <span className="w-1/3 h-full bg-[#fdd116]"></span>
+              <span className="w-1/3 h-full bg-[#003da5]"></span>
+              <span className="w-1/3 h-full bg-[#ce1126]"></span>
+            </span>
           </div>
         </a>
 

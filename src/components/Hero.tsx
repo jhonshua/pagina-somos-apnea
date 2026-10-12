@@ -14,13 +14,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenJoinModal }) => {
       {/* Background Image Layer */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/hero-bg.png" 
+          src="/hero-bg.jpg" 
           alt="Somos Apnea - Escuela de apnea deportiva en Venezuela" 
-          className="w-full h-full object-cover object-center filter brightness-95"
+          className="w-full h-full object-cover object-[60%_center] md:object-center filter brightness-95 contrast-[1.05]"
         />
         {/* Ambient Oceanic Overlays for readability and depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/20 to-ocean-950/40 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ocean-950/80 via-ocean-900/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ocean-950 via-transparent to-ocean-950/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ocean-950/90 via-ocean-950/40 to-transparent max-w-4xl" />
         {/* Subtle Water Caustic / God Rays Glow */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none" />
       </div>

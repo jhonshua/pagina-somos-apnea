@@ -10,12 +10,13 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="md:col-span-2">
-            <div className="flex items-center mb-4 select-none">
+            <div className="flex items-center gap-1.5 sm:gap-2 mb-4 select-none">
               <img 
-                src="/somos-apnea-logo-full.png" 
-                alt="Somos Apnea Venezuela" 
-                className="h-10 sm:h-12 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none"
+                src="/somos-apnea-logo-oficial.png" 
+                alt="Somos Apnea" 
+                className="h-10 sm:h-12 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] pointer-events-none"
               />
+              <VenezuelaFlag className="w-5 h-3.5 sm:w-6 sm:h-4" />
             </div>
 
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-sm mb-6">

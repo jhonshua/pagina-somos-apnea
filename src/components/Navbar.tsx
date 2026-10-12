@@ -23,13 +23,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
     <header className="fixed top-3 md:top-5 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <nav className="glass-nav rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300">
         
-        {/* Logo Oficial Maestro Integrado: SOMOS APNEA + Ballena centrada de fondo + Bandera Ondulante */}
-        <a href="#home" className="flex items-center group cursor-pointer select-none py-0.5">
+        {/* Logo Oficial Original de Somos Apnea + Bandera Ondulante */}
+        <a href="#home" className="flex items-center gap-1.5 sm:gap-2 group cursor-pointer select-none py-0.5">
           <img 
-            src="/somos-apnea-logo-full.png" 
-            alt="Somos Apnea Venezuela" 
-            className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none"
+            src="/somos-apnea-logo-oficial.png" 
+            alt="Somos Apnea" 
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] pointer-events-none"
           />
+          <VenezuelaFlag className="w-5 h-3.5 sm:w-6 sm:h-4" />
         </a>
 
         {/* Desktop Nav Links */}

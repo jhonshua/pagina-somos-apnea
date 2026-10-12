@@ -23,28 +23,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal }) => {
     <header className="fixed top-3 md:top-5 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <nav className="glass-nav rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300">
         
-        {/* Logo Oficial: SOMOS + Ballena Grande + APNEA en una sola fila */}
-        <a href="#home" className="flex items-center gap-2 sm:gap-2.5 md:gap-3 group">
-          {/* SOMOS (letras más pequeñas y estilizadas) */}
-          <span className="text-white text-xs sm:text-[13px] md:text-sm font-bold tracking-[0.2em] drop-shadow leading-none uppercase">
+        {/* Logo Oficial: SOMOS + Ballena + APNEA + Bandera Ondulante integrados */}
+        <a href="#home" className="flex items-center group cursor-pointer select-none">
+          {/* SOMOS */}
+          <span className="text-white text-xs sm:text-[13px] md:text-sm font-black tracking-wider drop-shadow leading-none uppercase">
             SOMOS
           </span>
 
-          {/* En el medio: Solo la ballena flotante más grande (sin botón ni círculo) */}
-          <div className="relative h-12 sm:h-14 md:h-16 w-10 sm:w-12 md:w-14 flex items-center justify-center shrink-0">
+          {/* En el medio: Solo la ballena (espaciado reducido a la mitad, sin zoom/agrandamiento al pasar el dedo) */}
+          <div className="relative h-11 sm:h-12 md:h-14 w-auto mx-1 sm:mx-1.5 flex items-center justify-center shrink-0">
             <img 
               src="/whale-only.png" 
-              alt="Somos Apnea Ballena" 
-              className="h-full w-full object-contain filter drop-shadow-[0_0_10px_rgba(56,164,224,0.6)] group-hover:scale-110 transition-transform duration-300"
+              alt="Somos Apnea" 
+              className="h-full w-auto object-contain filter drop-shadow-[0_0_8px_rgba(56,164,224,0.5)] pointer-events-none"
             />
           </div>
 
-          {/* APNEA (letras más pequeñas) + Bandera oficial de Venezuela */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <span className="text-cyan-300 text-xs sm:text-[13px] md:text-sm font-extrabold tracking-[0.18em] drop-shadow leading-none uppercase">
+          {/* APNEA + Bandera Ondulante de Venezuela */}
+          <div className="flex items-center gap-1 sm:gap-1.5">
+            <span className="text-cyan-300 text-xs sm:text-[13px] md:text-sm font-black tracking-wider leading-none drop-shadow uppercase">
               APNEA
             </span>
-            <VenezuelaFlag className="w-4 h-2.5 sm:w-5 sm:h-3.5 shadow" />
+            <VenezuelaFlag className="w-5 h-3.5 sm:w-6 sm:h-4" />
           </div>
         </a>
 
